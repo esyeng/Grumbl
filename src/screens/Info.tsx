@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import Button from '../components/Button';
 import TextLarge from '../components/TextLarge';
-import theme from '../../theme/theme'; // Assuming theme is in the same directory
+import theme from '../../theme/theme';
 
 interface InfoProps {
     image: string;
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         height: 342,
         top: 113,
         left: 9,
-        resizeMode: 'cover', // Equivalent to object-cover
+        resizeMode: 'cover',
     },
     svgContainer: {
         position: 'absolute',
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
         top: 465,
         left: 56,
     },
-    // Add other styles and svgClass styles here
 });
 
 export default Info;
