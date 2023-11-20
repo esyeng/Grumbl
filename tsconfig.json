@@ -1,28 +1,6 @@
 {
-    "extends": "@tsconfig/react-native/tsconfig.json",
-    "compilerOptions": {
-        "allowJs": true,
-        "jsx": "react-native",
-        "noEmit": true,
-        "module": "esnext",
-        "skipLibCheck": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "strict": true,
-        "noImplicitAny": false,
-        "moduleResolution": "node",
-        "baseUrl": "./",
-        "lib": [
-            "es6",
-            "dom",
-            "esnext.asynciterable"
-        ],
-        "types": [
-            "react-native",
-            "jest",
-            "node",
-            "@types/react-native"
-        ],
-        "allowSyntheticDefaultImports": true
-    },
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true
+  }
 }
