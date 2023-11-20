@@ -35,7 +35,17 @@ fonts: {
     body1: TextStyle;
     body2: TextStyle;
     caption: TextStyle;
-    button: TextStyle;
+    button:{
+        large: ViewStyle;
+        medium: ViewStyle;
+        small: ViewStyle;
+        fontFamily: any;
+        fontSize: number;
+        flexDirection: any;
+        alignItems: any;
+        justifyContent: any;
+        overflow: any;
+    }
 };
     components: {
     container: ViewStyle;
@@ -96,8 +106,27 @@ fonts: { // Change these to our fonts
         fontSize: 12,
     },
     button: {
+        large: {
+            paddingHorizontal: 20,
+            paddingVertical: 16,
+            borderRadius: 16,
+        },
+        medium: {
+            paddingHorizontal: 16,
+            paddingVertical: 12,
+            borderRadius: 12,
+        },
+        small: {
+            paddingHorizontal: 12,
+            paddingVertical: 8,
+            borderRadius: 8,
+        },
         fontFamily: 'Georgia-Bold',
         fontSize: 16,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
     },
 },
 components: {
