@@ -3,21 +3,20 @@ import { View, Image, StyleSheet } from 'react-native';
 import Button from '../components/Button';
 import TextLarge from '../components/TextLarge';
 import theme from '../../theme/theme';
+import * as infoGlyph from '../../assets/info_one_graphic.png';
 
 interface InfoProps {
-    image: string;
+    // image: "*.png" | string | any;
     alt: string;
-    svgClass: string;
-    svgPath: string;
+    svg?: any;
     infoText: string;
     btnText: string;
 }
 
 export const Info = ({
-    image,
+    // image,
     alt,
-    svgClass,
-    svgPath,
+    svg,
     infoText,
     btnText,
 }: InfoProps): JSX.Element => {
@@ -25,12 +24,12 @@ export const Info = ({
         <View style={styles.mainContainer}>
             <View style={styles.imageContainer}>
                 <Image
-                    source={{ uri: image }}
+                    source={infoGlyph}
                     style={styles.image}
                     alt={alt}
                 />
-                <View style={styles.svgContainer}>
-                    <Image style={styles[svgClass]} alt="Vector" source={{ uri: svgPath }} />
+                <View >
+
                     <TextLarge
                         text={infoText}
                     />
@@ -54,6 +53,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        height: '100%',
+
     },
     imageContainer: {
         backgroundColor: theme.colors.background,
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
         height: 342,
         top: 113,
         left: 9,
-        resizeMode: 'cover',
+        resizeMode: 'contain',
     },
     svgContainer: {
         position: 'absolute',
